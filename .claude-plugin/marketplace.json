@@ -1,0 +1,16 @@
+{
+  "name": "cognition-ai",
+  "description": "The Cognition connector and skills for Claude Code.",
+  "owner": {
+    "name": "GiGa Software",
+    "url": "https://evolving-cognition.com"
+  },
+  "plugins": [
+    {
+      "name": "cognition",
+      "source": "./",
+      "description": "Use Cognition from Claude: sign in with your Cognition account and work with your own notes, quizzes and deadlines.",
+      "category": "productivity"
+    }
+  ]
+}

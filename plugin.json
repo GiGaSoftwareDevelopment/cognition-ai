@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cognition",
+  "version": "0.1.0",
+  "description": "Use Cognition from your assistant: sign in with your Cognition account and work with your own notes, quizzes and deadlines.",
+  "author": {
+    "name": "GiGa Software",
+    "url": "https://evolving-cognition.com"
+  },
+  "homepage": "https://evolving-cognition.com/help/connect-ai",
+  "repository": "https://github.com/GiGaSoftwareDevelopment/cognition-ai",
+  "license": "MIT",
+  "keywords": ["cognition", "study", "quizzes", "notes", "mcp", "connector"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Cognition",
+        "shortDescription": "Your notes, quizzes, deadlines",
+        "longDescription": "Connect your Cognition account to ChatGPT. Ask about your own workspaces (classes), notes, quizzes, grades, deadlines and journal, add notes and deadlines, and be quizzed in the chat on a quiz you made in Cognition; your result is saved to your Grades and Stats once you confirm the score. Changes you ask for are confirmed with you first. Changes to more than one record wait for your review in Cognition, and you can see and undo what ChatGPT did from Settings › Connected AI. The connector is part of Cognition Pro: https://app.evolving-cognition.com/subscribe",
+        "developerName": "GiGa Software",
+        "websiteURL": "https://evolving-cognition.com",
+        "privacyPolicyURL": "https://evolving-cognition.com/privacy-policy",
+        "termsOfServiceURL": "https://evolving-cognition.com/terms-of-use",
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/composer-icon.png"
+      }
+    }
+  }
+}

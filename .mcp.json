@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "cognition": {
+      "type": "http",
+      "url": "https://mcp.evolving-cognition.com/mcp"
+    }
+  }
+}
