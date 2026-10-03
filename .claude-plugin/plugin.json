@@ -1,7 +1,7 @@
 {
   "name": "cognition",
   "displayName": "Cognition",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Use Cognition from Claude: sign in with your Cognition account and work with your own notes, quizzes and deadlines.",
   "author": {
     "name": "GiGa Software",
