@@ -15,9 +15,15 @@ checks each answer. Follow the cognition-connector skill for confirmation and pe
   both together.
 - If one quiz clearly matches what the user asked for, use it. If several could match, list them by
   name and question count and ask the user to pick. Do not guess.
-- If the user names a subject but no quiz matches, say so. Offer to make one only if the user asks:
-  `create_quiz` when you write the questions yourself, or `generate_quiz` to turn a note in Cognition
-  into a quiz (it needs a workspace). Both follow the cognition-connector skill's confirmation rules.
+- If the user names a subject but no quiz matches, say so, and offer to make one from their notes.
+  Make it yourself: find the note with `list_notes`, read it with `get_note`, and write the
+  questions from it. For a long lecture, cover the part the user wants, or ask which part. Then offer
+  to save the quiz to Cognition with `create_quiz`, so Cognition keeps it, checks each answer and
+  counts the results. If the user declines, quiz them from your own questions in this chat.
+- Use `generate_quiz` only when the user asks Cognition's own AI to write the quiz; it counts
+  against their monthly AI quiz generations and needs a workspace. When it says a note is too long,
+  offer the user the parts it lists (or ask which part they want), then call it again with that
+  part's `from` and `to`. Both tools follow the cognition-connector skill's confirmation rules.
 - Call `get_quiz` with the `quizId` and the same workspace pair (none for a private quiz).
 
 ## 2. Ask one question at a time
