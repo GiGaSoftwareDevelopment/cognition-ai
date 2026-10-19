@@ -1,7 +1,7 @@
 # Cognition for Claude Code
 
 Use Cognition from Claude Code. Cognition is a study app: workspaces for your classes, notes,
-quizzes and grades, deadlines, bookmarks, transcripts and a journal. You sign in with your own
+quizzes and grades, deadlines, tasks, bookmarks, documents, transcripts and a journal. You sign in with your own
 Cognition account, choose what Claude may do, and can see and undo everything it did from
 [Settings › Connected AI](https://app.evolving-cognition.com/connected-ai).
 
@@ -35,6 +35,8 @@ Step-by-step help for each assistant: https://evolving-cognition.com/help/connec
 - It sees only your own Cognition data.
 - It asks you before it edits or deletes anything. Saving a transcript, or a part of one, is a new
   note, so it needs no question; you can undo each part from Settings › Connected AI.
+- In a workspace where you are the Owner or a Teacher, it can add an SVG drawing to the workspace's
+  documents and change one; changing one asks you first. Any member's Claude can look at one.
 - A change to more than one record waits for your review in Cognition.
 - Every call is listed in Settings › Connected AI, where you can undo a single change for a limited
   time, or disconnect Claude.

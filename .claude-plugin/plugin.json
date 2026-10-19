@@ -1,8 +1,8 @@
 {
   "name": "cognition",
   "displayName": "Cognition",
-  "version": "0.2.1",
-  "description": "Use Cognition from Claude: sign in with your Cognition account and work with your own notes, quizzes, deadlines and transcripts.",
+  "version": "0.2.2",
+  "description": "Use Cognition from Claude: sign in with your Cognition account and work with your own notes, quizzes, deadlines, tasks, transcripts and SVG documents.",
   "author": {
     "name": "GiGa Software",
     "url": "https://evolving-cognition.com"
@@ -10,5 +10,14 @@
   "homepage": "https://evolving-cognition.com/help/connect-ai",
   "repository": "https://github.com/GiGaSoftwareDevelopment/cognition-ai",
   "license": "MIT",
-  "keywords": ["cognition", "study", "quizzes", "notes", "transcripts", "mcp", "connector"]
+  "keywords": [
+    "cognition",
+    "study",
+    "quizzes",
+    "notes",
+    "transcripts",
+    "documents",
+    "mcp",
+    "connector"
+  ]
 }

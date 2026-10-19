@@ -17,13 +17,19 @@ checks each answer. Follow the cognition-connector skill for confirmation and pe
   name and question count and ask the user to pick. Do not guess.
 - If the user names a subject but no quiz matches, say so, and offer to make one from their notes.
   Make it yourself: find the note with `list_notes`, read it with `get_note`, and write the
-  questions from it. For a long lecture, cover the part the user wants, or ask which part. Then offer
-  to save the quiz to Cognition with `create_quiz`, so Cognition keeps it, checks each answer and
-  counts the results. If the user declines, quiz them from your own questions in this chat.
-- Use `generate_quiz` only when the user asks Cognition's own AI to write the quiz; it counts
-  against their monthly AI quiz generations and needs a workspace. When it says a note is too long,
-  offer the user the parts it lists (or ask which part they want), then call it again with that
-  part's `from` and `to`. Both tools follow the cognition-connector skill's confirmation rules.
+  questions from it. A long note comes back as a list of parts: read the parts you need with their
+  `from` and `to` (all of them for a whole lecture). For a long lecture, cover the part the user
+  wants, or ask which part.
+  - Ask how many questions, or write 5 to 10.
+  - Use `multiple_choice` with one clearly correct answer and plausible wrong choices, or
+    `true_false`. Each question tests one idea from the note; no duplicates.
+  - Give each a short explanation grounded in the note, citing the moment (MM:SS) for a transcript.
+- Then, before asking any question, ask whether to save the quiz to Cognition: saved, the score
+  counts toward their Grades and memory.
+  - If yes, save it with `create_quiz` in the note's workspace, named after the note and any part
+    (for example "Quiz — Lecture 4 (00:00–25:00)"), with a one-line description, and run it as
+    below. It follows the cognition-connector skill's confirmation rules.
+  - Only if no, quiz them from your own questions in this chat.
 - Call `get_quiz` with the `quizId` and the same workspace pair (none for a private quiz).
 
 ## 2. Ask one question at a time

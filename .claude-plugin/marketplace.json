@@ -9,7 +9,7 @@
     {
       "name": "cognition",
       "source": "./",
-      "description": "Use Cognition from Claude: sign in with your Cognition account and work with your own notes, quizzes, deadlines and transcripts.",
+      "description": "Use Cognition from Claude: sign in with your Cognition account and work with your own notes, quizzes, deadlines, tasks, transcripts and SVG documents.",
       "category": "productivity"
     }
   ]

@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "cognition",
-  "version": "0.2.1",
-  "description": "Use Cognition from your assistant: sign in with your Cognition account and work with your own notes, quizzes, deadlines, bookmarks and video transcripts.",
+  "version": "0.2.2",
+  "description": "Use Cognition from your assistant: sign in with your Cognition account and work with your own notes, quizzes, deadlines, tasks, bookmarks, video transcripts and SVG documents.",
   "author": {
     "name": "GiGa Software",
     "url": "https://evolving-cognition.com"
@@ -10,20 +10,30 @@
   "homepage": "https://evolving-cognition.com/help/connect-ai",
   "repository": "https://github.com/GiGaSoftwareDevelopment/cognition-ai",
   "license": "MIT",
-  "keywords": ["cognition", "study", "quizzes", "notes", "transcripts", "mcp", "connector"],
+  "keywords": [
+    "cognition",
+    "study",
+    "quizzes",
+    "notes",
+    "transcripts",
+    "documents",
+    "mcp",
+    "connector"
+  ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Cognition",
         "shortDescription": "Your notes, quizzes, deadlines",
-        "longDescription": "Cognition is a study app for your classes: notes, quizzes, grades, deadlines and a study journal. Connect your Cognition account to ChatGPT and study from the chat. Ask what is due this week, find and read your notes, see how you are doing on your quizzes, add notes and deadlines, save links to a workspace's bookmarks, save a video's transcript as a note, and be quizzed one question at a time on a quiz you made in Cognition; your score is saved to your Grades and Stats once you confirm it. ChatGPT works only with your own Cognition data. Every edit or delete is confirmed with you first, changes to more than one record wait for your review in Cognition, and you can see and undo what ChatGPT did from Settings › Connected AI.",
+        "longDescription": "Cognition is a study app for your classes: notes, quizzes, grades, deadlines, tasks and a study journal. Connect your Cognition account to ChatGPT and study from the chat. Ask what is due this week, find and read your notes, see how you are doing on your quizzes, add notes, deadlines and tasks, tick tasks off, save links to a workspace's bookmarks, save a video's transcript as a note, look at a workspace's SVG diagrams and draw or change one, and be quizzed one question at a time on a quiz you made in Cognition; your score is saved to your Grades and Stats once you confirm it. ChatGPT works only with your own Cognition data. Every edit or delete is confirmed with you first, changes to more than one record wait for your review in Cognition, and you can see and undo what ChatGPT did from Settings › Connected AI.",
         "developerName": "GiGa Software",
         "category": "Education & Research",
         "capabilities": [
           "See what is due",
           "Read your notes",
           "Quiz you on your quizzes",
-          "Add notes and deadlines",
+          "Add notes, deadlines and tasks",
+          "Draw and edit SVG diagrams",
           "Review your quiz results"
         ],
         "websiteURL": "https://evolving-cognition.com",
