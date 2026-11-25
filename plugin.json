@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "evolving-cognition",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Use Cognition from your assistant: sign in with your Cognition account and work with your own notes, quizzes, flashcards, deadlines, tasks, bookmarks, video transcripts and SVG documents.",
   "author": {
     "name": "GiGaSoftware Inc.",
