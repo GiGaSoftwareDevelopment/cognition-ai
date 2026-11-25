@@ -1,13 +1,15 @@
 ---
 name: save-transcript
-description: Save a transcript of a video or audio the user studies as a note in Cognition. Use when the user asks to save, store or add the transcript of a lecture, video or recording to a workspace, such as "save the transcript of this lecture to my Biology course".
+description: Save a transcript the user gives you, such as one they paste or YouTube's own, as a note in Cognition. Use when the user asks to save, store or add the transcript of a lecture, video or recording to a workspace, such as "save the transcript of this lecture to my Biology course". Also use when the user asks you to transcribe a video: you cannot, and this skill says what to do instead.
 ---
 
 # Save a transcript
 
 Cognition keeps the transcript as an ordinary note the user can read, search and make quizzes from.
-You send the words; Cognition does not ask, and you do not say, how the transcript was made. Follow the
-cognition-connector skill for permissions and refusals.
+You save the transcript the user gives you; you cannot transcribe a video, and Cognition does not
+transcribe one from the chat. If the user has no transcript, say so: save the video's link as a
+bookmark with `create_bookmark`, and the user transcribes it in the Cognition app or with Cognition for
+Chrome. Follow the cognition-connector skill for permissions and refusals.
 
 ## 1. Pick the workspace
 

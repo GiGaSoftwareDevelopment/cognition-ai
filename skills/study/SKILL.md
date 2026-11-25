@@ -75,8 +75,7 @@ Claude Code shows no card. Without one, study in the chat, steps 3 to 6.
 
 ## Make cards
 
-- You write every card yourself, in the chat, however long the note or lecture. Never call
-  `generate_cards`.
+- You write every card yourself, in the chat, however long the note or lecture.
 - From a note: find it with `list_notes` and read it with `get_note`; read a long note or lecture in
   parts and write its cards part by part. Write one idea per card, with a clear prompt and answer,
   and pass `source` with the note's id. In claude.ai and ChatGPT, where a card
