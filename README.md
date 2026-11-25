@@ -13,7 +13,7 @@ In Claude Code:
 
 ```
 /plugin marketplace add GiGaSoftwareDevelopment/cognition-ai
-/plugin install cognition@cognition-ai
+/plugin install evolving-cognition@cognition-ai
 ```
 
 Restart Claude Code if it asks, then run `/mcp`, choose **cognition** and sign in. Your browser
@@ -60,8 +60,8 @@ and names the source and its date in each question or card.
   your notes, or from official figures, and offers to save it to Cognition.
 - **save-transcript**: Claude saves the transcript of a video or recording you study as a note in
   one of your workspaces, with its timestamps, sending a long one in parts. Run it as
-  `/cognition:save-transcript`.
+  `/evolving-cognition:save-transcript`.
 - **study**: Claude studies your flashcards with you, one card at a time. You answer in your own
   words, Claude tells you whether you were correct, close or wrong, and saves the session to your
   memory if you say so. It can also write cards from a note or from official figures. Run it as
-  `/cognition:study`.
+  `/evolving-cognition:study`.
