@@ -1,7 +1,7 @@
 # Cognition for Claude Code
 
-Use Cognition from Claude Code. Cognition is a study app: workspaces for your classes, notes,
-quizzes and grades, deadlines, tasks, bookmarks, documents, transcripts and a journal. You sign in with your own
+Use Cognition from Claude Code. Cognition is a study app: workspaces for your courses, notes,
+quizzes, flashcards and grades, deadlines, tasks, bookmarks, documents, transcripts and a journal. You sign in with your own
 Cognition account, choose what Claude may do, and can see and undo everything it did from
 [Settings › Connected AI](https://app.evolving-cognition.com/connected-ai).
 
@@ -30,6 +30,18 @@ https://mcp.evolving-cognition.com/mcp
 
 Step-by-step help for each assistant: https://evolving-cognition.com/help/connect-ai
 
+In claude.ai and ChatGPT, Cognition answers some requests with a card in the chat: a quiz you take
+there, your due flashcards with their pictures and sounds, what's due this week, a workspace's
+bookmarks with search and tags, an SVG document, and a confirm card for each change. Claude Code
+answers the same requests in text.
+
+## Works well with government data
+
+Cognition holds no public statistics. Add the USAFacts Government Data Connector to your assistant
+(from its connector settings), then ask for a quiz or flashcards on official figures, such as "quiz
+me on U.S. demographics". The assistant fetches the figures, saves the quiz or cards to Cognition,
+and names the source and its date in each question or card.
+
 ## What Claude can and cannot do
 
 - It sees only your own Cognition data.
@@ -45,7 +57,11 @@ Step-by-step help for each assistant: https://evolving-cognition.com/help/connec
 
 - **quiz-me**: Claude quizzes you on one of your Cognition quizzes, one question at a time, and
   saves your score to your Grades and Stats if you say so. With no quiz yet, Claude writes one from
-  your notes and offers to save it to Cognition.
+  your notes, or from official figures, and offers to save it to Cognition.
 - **save-transcript**: Claude saves the transcript of a video or recording you study as a note in
   one of your workspaces, with its timestamps, sending a long one in parts. Run it as
   `/cognition:save-transcript`.
+- **study**: Claude studies your flashcards with you, one card at a time. You answer in your own
+  words, Claude tells you whether you were correct, close or wrong, and saves the session to your
+  memory if you say so. It can also write cards from a note or from official figures. Run it as
+  `/cognition:study`.

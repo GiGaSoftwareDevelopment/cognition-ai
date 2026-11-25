@@ -2,7 +2,7 @@
   "name": "cognition-ai",
   "description": "The Cognition connector and skills for Claude Code.",
   "owner": {
-    "name": "GiGa Software",
+    "name": "GiGaSoftware Inc.",
     "url": "https://evolving-cognition.com"
   },
   "plugins": [

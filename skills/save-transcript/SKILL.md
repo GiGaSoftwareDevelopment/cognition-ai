@@ -42,9 +42,11 @@ into parts, cut between segments, in order.
 
 ## 4. Link a bookmark (optional)
 
-If the user says the transcript belongs to a bookmark in the workspace, call `list_bookmarks`, pick
-the matching one and pass its `bookmarkId` to `add_transcript`. The bookmark then links to the note.
-Do not link one the user did not mention.
+If the user says the transcript belongs to a bookmark in the workspace, find it with `list_bookmarks`:
+pass `search` with words from its title, which searches every bookmark, not just the newest. There is
+no tag argument; filter the returned page by each bookmark's `tags` if that helps. Pick the matching
+one and pass its `bookmarkId` to `add_transcript`. The bookmark then links to the note. Do not link
+one the user did not mention. Where Cognition's bookmarks card shows the list, do not read it out.
 
 ## 5. Tell the user
 
