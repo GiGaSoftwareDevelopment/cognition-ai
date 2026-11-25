@@ -75,8 +75,11 @@ Claude Code shows no card. Without one, study in the chat, steps 3 to 6.
 
 ## Make cards
 
-- From a note: find it with `list_notes` and read it with `get_note` (a long note in parts). Write the
-  cards yourself: one idea each, a clear prompt and answer. In claude.ai and ChatGPT, where a card
+- You write every card yourself, in the chat, however long the note or lecture. Never call
+  `generate_cards`.
+- From a note: find it with `list_notes` and read it with `get_note`; read a long note or lecture in
+  parts and write its cards part by part. Write one idea per card, with a clear prompt and answer,
+  and pass `source` with the note's id. In claude.ai and ChatGPT, where a card
   shows what was saved, say how many you wrote and ask whether to save them; the card lists them once
   saved. In Claude Code, show them and ask. After the user agrees, save them with `create_cards`. It
   costs nothing.
@@ -90,9 +93,6 @@ Claude Code shows no card. Without one, study in the chat, steps 3 to 6.
   Cognition, and nothing is saved yet. Where the card shows, it says so: do not repeat that. With no
   card, say how many wait for review in the Cognition app, under Settings › Connected AI. Do not
   offer to study cards that wait for approval.
-- For a long note or lecture, offer `generate_cards`, which spends the user's AI generations and asks
-  them to confirm. It takes about a minute: follow it with `get_generated_cards` until it is ready,
-  show the drafts, and save the ones the user keeps with `create_cards`.
 - A student's cards go on their own Flashcards page (no workspace pair). Only an Owner or Teacher
   adds cards to a workspace.
 
