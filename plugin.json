@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "evolving-cognition",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "Use Cognition from your assistant: sign in with your Cognition account and work with your own notes, quizzes, flashcards, deadlines, tasks, bookmarks, transcripts you give it and SVG documents.",
   "author": {
     "name": "GiGaSoftware Inc.",
@@ -50,12 +50,7 @@
         ],
         "brandColor": "#4F8DE8",
         "logo": "./assets/logo.png",
-        "composerIcon": "./assets/composer-icon.png",
-        "screenshots": [
-          "./assets/screenshot-due-this-week.png",
-          "./assets/screenshot-quiz.png",
-          "./assets/screenshot-flashcards.png"
-        ]
+        "composerIcon": "./assets/composer-icon.png"
       }
     }
   }
