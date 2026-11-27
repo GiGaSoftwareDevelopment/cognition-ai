@@ -1,7 +1,7 @@
 {
   "name": "evolving-cognition",
   "displayName": "Evolving Cognition",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "description": "Use Cognition from Claude: sign in with your Cognition account and work with your own notes, quizzes, flashcards, deadlines, tasks, bookmarks, transcripts and SVG documents.",
   "author": {
     "name": "GiGaSoftware Inc.",

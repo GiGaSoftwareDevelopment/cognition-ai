@@ -13,8 +13,10 @@ confirmation, permissions and its In-chat cards section.
 - Call `list_quizzes`. With no arguments it lists the user's private quizzes. For a quiz in a workspace,
   call `list_workspaces` first and pass that workspace's `workspaceType` and `workspaceId`, always
   both together.
-- If one quiz clearly matches what the user asked for, use it. If several could match, list them by
-  name and question count and ask the user to pick. Do not guess.
+- If one quiz clearly matches what the user asked for, open it with `get_quiz` right away. Never ask
+  whether to save a quiz that is already in Cognition: it is saved already, and the card or the chat
+  quiz offers to save the score at the end. If several could match, list them by name and question
+  count and ask the user to pick. Do not guess.
 - If the user names a subject but no quiz matches, say so, and offer to make one from their notes.
   Make it yourself: find the note with `list_notes`, read it with `get_note`, and write the
   questions from it. A long note comes back as a list of parts: read the parts you need with their
@@ -24,24 +26,24 @@ confirmation, permissions and its In-chat cards section.
   - Use `multiple_choice` with one clearly correct answer and plausible wrong choices, or
     `true_false`. Each question tests one idea from the note; no duplicates.
   - Give each a short explanation grounded in the note, citing the moment (MM:SS) for a transcript.
+  - Then, before asking any question, ask whether to save the quiz to Cognition: saved, the score
+    counts toward their Grades and memory.
+    - If yes, save it with `create_quiz` in the note's workspace, named after the note and any part
+      (for example "Quiz — Lecture 4 (00:00–25:00)"), with a one-line description. Then say in one
+      line where it was saved and how many questions it has, and offer to take it. Where Cognition's
+      card shows, it lists them, answers hidden, so do not list them again. With no card, name the
+      topics they cover in a line or two, without the answers.
+    - Only if no, quiz them from your own questions in this chat.
 - **A quiz on official figures** ("quiz me on U.S. demographics"): Cognition holds no public
   statistics. If a government data connector is available (the USAFacts Government Data Connector,
   Data Commons), fetch the figures from it and write the questions from them, naming the source and
   its date in each explanation. If none is available, say that Cognition works best alongside the
   USAFacts Government Data Connector, which they can add from their assistant's connector settings,
-  and give no figures from memory.
-- Then, before asking any question, ask whether to save the quiz to Cognition: saved, the score
-  counts toward their Grades and memory.
-  - If yes, save it with `create_quiz` in the note's workspace, named after the note and any part
-    (for example "Quiz — Lecture 4 (00:00–25:00)"), with a one-line description. Then say in one
-    line where it was saved and how many questions it has, and offer to take it. Where Cognition's
-    card shows, it lists them, answers hidden, so do not list them again. With no card, name the
-    topics they cover in a line or two, without the answers.
-  - Only if no, quiz them from your own questions in this chat.
-- Call `get_quiz` with the `quizId` and the same workspace pair (none for a private quiz). A long
-  quiz comes in parts: `questionCount` is how many questions it has, and `nextFrom`, when more
-  remain, is the `from` to pass for the next part. Read the next part when you reach the end of this
-  one.
+  and give no figures from memory. Ask whether to save the quiz you wrote, as above.
+- Call `get_quiz` with the `quizId` and the same workspace pair (none for a private quiz), for a found
+  quiz and for one you just saved. A long quiz comes in parts: `questionCount` is how many questions
+  it has, and `nextFrom`, when more remain, is the `from` to pass for the next part. Read the next
+  part when you reach the end of this one.
 
 ## 2. When Cognition's quiz card shows
 
